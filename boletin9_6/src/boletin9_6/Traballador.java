@@ -18,23 +18,23 @@ public class Traballador {
 
     Scanner teclado = new Scanner(System.in);
 
-    private int pedirSueldo() {
+    private double pedirSueldo() {
 
-        int numero;
+        double numero;
         do {
             System.out.println("Introduce sueldo :");
-            numero = teclado.nextInt();
+            numero = teclado.nextDouble();
         } while (numero < 0);
         return numero;
 
     }
 
     public void calcularTrabajadores() {
-        int sueldo;
+       double sueldo;
         int trabajadores = 0;
         int trabSueldoMas = 0;
         int trabSueldoMen=0;
-        int porcentaje = 0;
+        float porcentaje = 0;
         do {
             sueldo = pedirSueldo();
             trabajadores++;
