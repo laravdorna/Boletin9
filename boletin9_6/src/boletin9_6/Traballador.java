@@ -10,6 +10,7 @@ import java.util.Scanner;
  * non se admiten os soldos negativos.( utiliza como condidión de fin un soldo 0
  * ). .
  */
+
 /**
  *
  * @author Lara Vazquez Dorna

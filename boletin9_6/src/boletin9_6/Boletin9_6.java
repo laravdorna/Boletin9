@@ -27,7 +27,7 @@ public class Boletin9_6 {
 
         int sueldo = pedirSueldo();
 
-        while (sueldo != 0) {
+       do {
 
             int trabajadores = 0;
             int porcentaje = 0;
@@ -40,7 +40,7 @@ public class Boletin9_6 {
 
                 System.out.println("El porcentaje de trabajadores con sueldo inferior a 1000€ es: " + (porcentaje * trabajadores / 100) + "%");
             }
-        }
+        } while (sueldo != 0);
 
     }
 
