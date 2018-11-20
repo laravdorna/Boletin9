@@ -10,7 +10,6 @@ import java.util.Scanner;
  * non se admiten os soldos negativos.( utiliza como condidión de fin un soldo 0
  * ). .
  */
-
 /**
  *
  * @author Lara Vazquez Dorna
@@ -31,22 +30,25 @@ public class Traballador {
     }
 
     public void calcularTrabajadores() {
-        int sueldo = pedirSueldo();
+        int sueldo;
+        int trabajadores = 0;
+        int trabSueldoMas = 0;
+        int trabSueldoMen=0;
+        int porcentaje = 0;
         do {
-
-            int trabajadores = 0;
-            int porcentaje = 0;
+            sueldo = pedirSueldo();
+            trabajadores++;
 
             if (sueldo >= 1000 && sueldo <= 1750) {
-                trabajadores++;
-                System.out.println("El numero de trabajadores con sueldo entre 1000€ y 1750€ es: " + trabajadores);
+                trabSueldoMas++;
+                System.out.println("El numero de trabajadores con sueldo entre 1000€ y 1750€ es: " + trabSueldoMas);
             } else if (sueldo < 1000) {
-                porcentaje++;
-                porcentaje = porcentaje / 100;
+                trabSueldoMen++;
+                porcentaje = trabSueldoMen * 100 / trabajadores;
 
                 System.out.println("El porcentaje de trabajadores con sueldo inferior a 1000€ es: " + porcentaje + "%");
             }
-        } while (sueldo == 0);
+        } while (sueldo != 0);
 
     }
 

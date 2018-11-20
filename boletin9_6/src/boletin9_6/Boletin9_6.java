@@ -20,39 +20,9 @@ public class Boletin9_6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        //  Traballador traballador = new Traballador();
-        // traballador.calcularTrabajadores();
-        Scanner teclado = new Scanner(System.in);
-
-        int sueldo = pedirSueldo();
-
-       do {
-
-            int trabajadores = 0;
-            int porcentaje = 0;
-
-            if (sueldo >= 1000 && sueldo <= 1750) {
-                trabajadores++;
-                System.out.println("El numero de trabajadores con sueldo entre 1000€ y 1750€ es: " + trabajadores);
-            } else if (sueldo < 1000) {
-                porcentaje++;
-
-                System.out.println("El porcentaje de trabajadores con sueldo inferior a 1000€ es: " + (porcentaje * trabajadores / 100) + "%");
-            }
-        } while (sueldo != 0);
-
-    }
-
-    private static int pedirSueldo() {
-        Scanner teclado = new Scanner(System.in);
-        int numero;
-        do {
-            System.out.println("Introduce sueldo :");
-            numero = teclado.nextInt();
-        } while (numero < 0);
-        return numero;
-
+       
+          Traballador traballador = new Traballador();
+         traballador.calcularTrabajadores();
     }
 
 }
